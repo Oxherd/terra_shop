@@ -1,0 +1,89 @@
+nav{
+    background-color:white;
+    /*border: 1px solid darkgrey;*/
+    border-radius: 5px;
+    box-sizing:border-box;
+    box-shadow:5px 5px 10px grey;
+    font-size:1rem;
+    margin: .5rem;
+    padding:1rem;
+    position:absolute;
+    top:0;
+    width:95%;
+}
+.brand{
+    display:inline-block;
+    font-family: 'Merienda';
+    font-size: 1.5rem;
+}
+.auth{
+    float:right;
+    margin:.25rem .25rem 0 0;
+}
+.auth .login, .logout{
+    text-decoration: underline;
+}
+.auth .register{
+    background-color:#66ccff;
+    /*border:1px solid grey;*/
+    border-radius:5px;
+    /*font-weight:bold;*/
+    padding:.5rem;
+}
+.auth .register a{
+    color:white;
+    text-decoration:none;
+}
+.loginPanel{
+    background-color:white;
+    box-shadow:5px 5px 10px grey;
+    font-size:1.5rem;
+    left:50%;
+    padding:1rem;
+    position:fixed;
+    top:-20rem;
+    transition:.75s;
+    transform:translateX(-50%);
+    width:50%;
+    z-index:10;
+}
+.loginPanel h3{
+    border-bottom:2px solid black;
+    margin:1rem 0;
+}
+.loginPanel i{
+    position:absolute;
+    right:10px;
+    top:10px;
+}
+.loginPanel input{
+    font-size:1.5rem;
+    margin:.5rem auto;
+    width:100%;
+}
+.loginPanel button{
+    background-color:#00cc99;
+    color:white;
+    float:right;
+    font-size:1.5rem;
+}
+.login, .loginPanel i{
+    cursor:pointer;
+}
+
+
+
+@media screen and (min-width: 768px){
+    nav{
+        width:98%;
+    }
+    .brand{
+        font-size: 2rem;
+    }
+    .auth{
+        margin:.5rem;
+    }
+    .loginPanel{
+        width:30%;
+    }
+}

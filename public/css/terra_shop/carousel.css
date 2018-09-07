@@ -1,0 +1,56 @@
+.carousel{
+    height:15rem;
+    overflow: hidden;
+    position: relative;
+}
+.carousel li{
+    display: inline-block;
+    left:100%;
+    position: absolute;
+    width: 100%;
+}
+.carousel img{
+    height:auto;
+    width:100%;
+}
+
+.carousel .autoCarousel, .prev, .next{
+    cursor: pointer;
+}
+
+.carousel .autoCarousel{
+    background:rgba(255, 255, 255, 0.75);
+    border:1px solid white;
+    border-radius: 1rem;
+    display: block;
+    left:1rem;
+    padding:.25rem;
+    position: absolute;
+    top:1rem;
+}
+.carousel .pause{
+    background:none;
+    color:white;
+}
+
+.carousel .prev, .next{
+    color:rgba(255, 255, 255, 0.5);
+    font-size: 3rem;
+    position: absolute;
+    top:50%;
+    z-index:1;
+}
+
+.carousel .prev{
+    left:3rem;
+}
+
+.carousel .next{
+    right:3rem;
+}
+
+@media screen and (min-width: 768px){
+    .carousel{
+        height: 30rem;
+    }
+}
