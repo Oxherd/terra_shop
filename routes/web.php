@@ -6,8 +6,8 @@ Route::get('/', function () {
     $newestItems = array();
     $topRating = array();
 
-    if (count(\App\Item::all()) >= 5) {
-        $newestItems = \App\Item::all()->last()->take(5)->get()->sortByDesc('created_at');
+    if (count(\App\Item::all()) >= 4) {
+        $newestItems = \App\Item::all()->last()->take(4)->get()->sortByDesc('created_at');
     }
 
     if (count(\App\Comment::all()) >= 3) {
