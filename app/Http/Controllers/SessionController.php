@@ -6,11 +6,14 @@ use Illuminate\Http\Request;
 
 class SessionController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('guest', ['only' => 'index']);
+    }
+
     public function index()
     {
-        $admins = auth()->user()->all()->where('is_admin', true);
-
-        return view('sessions/index', compact('admins'));
+        return view('sessions.index');
     }
 
     public function store()
@@ -24,7 +27,14 @@ class SessionController extends Controller
             return back();
         }
 
-        return redirect()->home();
+        return redirect()->back();
+    }
+
+    public function admin()
+    {
+        $admins = auth()->user()->all()->where('is_admin', true);
+
+        return view('sessions/index', compact('admins'));
     }
 
     public function newAdmin()
@@ -57,6 +67,6 @@ class SessionController extends Controller
     {
         auth()->logout();
 
-        return redirect()->home();
+        return redirect()->back();
     }
 }

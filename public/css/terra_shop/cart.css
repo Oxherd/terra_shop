@@ -1,0 +1,72 @@
+.cartIcon{
+    background:white;
+    border-radius:5px;
+    box-shadow:5px 5px 10px darkgrey;
+    color:green;
+    cursor:pointer;
+    font-size:1.5rem;
+    padding:.5rem;
+    position:fixed;
+    right:1rem;
+    top:30%;
+    z-index:20;
+}
+.cart{
+    border:5px solid green;
+}
+.cart h3{
+    background:green;
+    color:white;
+    font-size:2rem;
+    padding:1rem;
+}
+.cart .head{
+    padding:1rem;
+}
+.cart .head li{
+    display:inline-block;
+    font-size:1.5rem;
+    text-align:center;
+    width:24%;
+}
+.cart .menu{
+    box-sizing:border-box;
+    display:block;
+    font-size:1.5rem;
+    padding:1rem;
+    width:100%;
+}
+.cart .menu li{
+    display:inline-block;
+    width:100%;
+}
+.cart .menu ul{
+    border-bottom:3px solid green;
+    margin:1rem 0;
+    position:relative;
+}
+.cart .menu ul li{
+    overflow:hidden;
+    text-align:center;
+    white-space: nowrap;
+    width:24%;
+}
+.cart form{
+    float:right;
+    overflow:hidden;
+}
+.cart button{
+    font-size:1.5rem;
+}
+
+.cart .delete{
+    position:absolute;
+    right:1rem;
+    top:0;
+}
+.cart .delete button{
+    background:none;
+    border:none;
+    color:red;
+    cursor:pointer;
+}

@@ -1,0 +1,22 @@
+.newItem{
+    border:5px solid #00cc99;
+    box-sizing:border-box;
+    font-size:0;
+    margin-bottom:1rem;
+}
+.newItem h3{
+    background:#00cc99;
+}
+.newItem .create input{
+    display:block;
+    margin-bottom:1rem;
+    width:30%;
+}
+.newItem .create textarea{
+    font-size:1.5rem;
+    width:75%;
+}
+.newItem .create button{
+    display:block;
+    margin-top:1rem;
+}

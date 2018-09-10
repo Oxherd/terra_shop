@@ -4,20 +4,17 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateItemsTable extends Migration
+class CreateOrdersTable extends Migration
 {
     /**
      * Run the migrations.
      */
     public function up()
     {
-        Schema::create('items', function (Blueprint $table) {
+        Schema::create('orders', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('classification_id');
-            $table->string('name')->unique();
-            $table->string('picture')->default('');
-            $table->integer('price');
-            $table->text('description');
+            $table->integer('user_id');
+            $table->integer('total_price');
             $table->timestamps();
         });
     }
@@ -27,6 +24,6 @@ class CreateItemsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('items');
+        Schema::dropIfExists('orders');
     }
 }

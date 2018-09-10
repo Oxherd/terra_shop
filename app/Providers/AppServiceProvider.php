@@ -17,6 +17,10 @@ class AppServiceProvider extends ServiceProvider
         view()->composer('partials.header', function ($view) {
             $view->with('categories', \App\Category::all());
         });
+
+        view()->composer('partials.tags', function ($view) {
+            $view->with('tags', \App\Tag::all());
+        });
     }
 
     /**

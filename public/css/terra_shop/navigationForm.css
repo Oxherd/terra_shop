@@ -1,0 +1,67 @@
+.navigationForm h3{
+    background:#66ccff;
+    color:white;
+    font-size:1.5rem;
+    padding:1rem;
+}
+.navigationForm .create{
+    box-sizing:border-box;
+    padding:1rem;
+    width:100%;
+}
+
+.navigationForm .create input{
+    font-size:1.5rem;
+    width:79%;
+}
+.navigationForm .create button{
+    font-size:1.5rem;
+    width:20%;
+}
+
+.navigationForm .group{
+    display:none;
+    width:90%;
+}
+.navigationForm .group input{
+    box-sizing:border-box;
+    font-size:1.25rem;
+    width:70%;
+}
+
+.navigationForm li{
+    vertical-align:top;
+}
+.navigationForm li button{
+    background:none;
+    border:none;
+    display:inline-block;
+    font-size:1.5rem;
+    margin:0;
+    padding:0;
+}
+
+/*icon*/
+.navigationForm li i{
+    border-radius:5px;
+    padding:.25rem;
+}
+.navigationForm li i:hover{
+    background:rgba(0, 0, 0, 0.15);
+    color:white;
+}
+.navigationForm li .check{
+    color:green;
+}
+.navigationForm li .cancel{
+    color:brown;
+}
+.navigationForm li .rename{
+    color:green;
+}
+.navigationForm .delete{
+    float:right;
+}
+.navigationForm .delete i{
+    color:red;
+}

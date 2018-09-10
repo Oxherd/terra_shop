@@ -1,0 +1,47 @@
+.sidebar{
+    border:5px solid #66ccff;
+    box-sizing:border-box;
+    font-size:0;
+    margin-bottom:1rem;
+}
+
+/*title*/
+
+.sidebar h3{
+    background:#66ccff;
+}
+.sidebar h3 i {
+    cursor:pointer;
+    float:right;
+}
+
+.sidebar .create{
+    border-bottom:5px solid #66ccff;
+}
+
+/*hint*/
+
+.sidebar h1{
+    color:brown;
+    font-size:3rem;
+    padding:1rem;
+}
+
+/*list*/
+
+.sidebar li{
+    background: linear-gradient(to bottom, white 30%, #f2f2f2);
+    font-size:1.5rem;
+    padding:.75rem 1rem;
+}
+
+.sidebar li.select{
+    background:#b3e6ff;
+    color:white;
+}
+
+/*@media screen and (min-width: 768px){*/
+/*    .sidebar{*/
+/*        width:30%;*/
+/*    }*/
+/*}*/

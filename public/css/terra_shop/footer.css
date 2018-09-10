@@ -1,0 +1,11 @@
+footer{
+    background:black;
+    box-sizing:border-box;
+    height:5rem;
+    padding:1rem;
+    width:100%;
+}
+footer p{
+    color:white;
+    text-align:center;
+}

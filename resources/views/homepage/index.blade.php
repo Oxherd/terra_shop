@@ -12,8 +12,4 @@
 
 @include('homepage.newestComments')
 
-@include('partials.tags')
-
-@include('partials.footer')
-
 @endsection

@@ -34,11 +34,31 @@ class ClassificationController extends Controller
         return view('classifications/show', compact('classification'));
     }
 
+    public function update(Classification $classification)
+    {
+        $this->validate(request(), [
+            'name' => 'required',
+            ]);
+
+        $classification->update([
+            'name' => strtolower(request('name')),
+            ]);
+
+        return redirect()->back();
+    }
+
     public function destroy(Classification $classification)
     {
-        $classification->items()->delete();
+        $classification->items()->each(function ($item) {
+            $item->tags()->detach();
+            $item->delete();
+        });
 
         $classification->delete();
+
+        if (url()->full() == url()->previous()) {
+            return redirect('/categories/'.$classification->category->name);
+        }
 
         return redirect()->back();
     }

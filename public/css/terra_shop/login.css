@@ -1,0 +1,24 @@
+.loginPage{
+    border:5px solid #66ccff;
+}
+.loginPage h3{
+    background:#66ccff;
+    color:white;
+    font-size:2rem;
+    padding:1rem;
+}
+.loginPage form{
+    overflow:hidden;
+    padding:1rem;
+}
+.loginPage form input{
+    font-size:1.5rem;
+    margin:1rem 0;
+    width:100%;
+}
+.loginPage form button{
+    background:#00cc99;
+    color:white;
+    float:right;
+    font-size:1.5rem;
+}

@@ -1,17 +1,17 @@
 <nav>
     <div class="container">
         
-        <div class="brand">Terra_Shop</div>
+        <div class="brand"><a href="/">Terra_Shop</a></div>
         
         @if(Auth::check())
             <div class="auth">
-                <span class="user">{{ Auth::user()->name }}</span> | 
+                <span class="user"><a href="/orders">{{ Auth::user()->name }}</a></span> | 
                 <span class="logout"><a href="/logout">Logout</a></span>
             </div>
         @else
             <div class="auth">
                 <span class="login">Login</span> or
-                <span class="register"><a href="">Register</a></span>
+                <span class="register"><a href="/register">Register</a></span>
             </div>
         @endif
         

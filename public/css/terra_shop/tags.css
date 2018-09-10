@@ -1,0 +1,39 @@
+.tags{
+    border:5px solid darkgrey;
+    box-sizing:border-box;
+    font-size:0;
+    margin-top:1rem;
+}
+
+.tags h3{
+    background:darkgrey;
+}
+
+.tags .create{
+    border-bottom:5px solid darkgrey;
+}
+
+.tags ul{
+    padding:1rem;
+}
+.tag{
+    background: linear-gradient(to bottom, white, #cccccc);
+    /*border-radius:99px;*/
+    display:inline-block;
+    font-size:1.25rem;
+    margin:.5rem .5rem 0 0;
+    padding:.5rem;
+}
+
+/*tag_list*/
+
+.tag_list .title{
+    background:#00cc99;
+    color:white;
+    font-size:1.5rem;
+    padding:1rem;
+}
+.tag_list .menu{
+    border: 5px solid #00cc99;
+    padding:1rem 0.75rem 1rem 1rem;
+}

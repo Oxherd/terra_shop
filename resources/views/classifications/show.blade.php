@@ -1,17 +1,26 @@
-<!DOCTYPE html>
-<html>
-    <head>
+@extends('partials.main', ['classification'])
+
+
+
+
+@section('content')
+<div class="container">
+    
+    <div class="classification-1">
+        @include('partials.sidebar', ['category' => $classification->category])
+    </div>
+    
+    <div class="classification-2">
         
-    </head>
-    <body>
-        <a href="/">Index Categories</a> > <a href="/categories/{{ $classification->category->name }}">Show Category</a> > <a>Show Classification</a>
-        <h1>{{ ucfirst($classification->name) }} related Items</h1>
-        <a href="/categories/{{ $classification->category->name }}">Back</a>
+            @include('items.newItem')
         
-        <ul>
             @foreach($classification->items as $item)
-                <li><a href="/items/{{ $item->name }}">{{ $item->name }}</a></li>
+    
+                @include('partials.item', ['item'])
+                
             @endforeach
-        </ul>
-    </body>
-</html>
+            
+    </div>
+
+</div>
+@endsection

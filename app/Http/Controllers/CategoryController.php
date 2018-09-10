@@ -34,9 +34,9 @@ class CategoryController extends Controller
 
     public function show(Category $category)
     {
-        // dd($category->classifications);
+        $classification = $category->classifications->first();
 
-        return view('categories/show', compact('category'));
+        return view('categories/show', compact('category', 'classification'));
     }
 
     public function update(Category $category)
@@ -54,10 +54,21 @@ class CategoryController extends Controller
 
     public function destroy(Category $category)
     {
+        $category->classifications()->each(function ($classification) {
+            $classification->items()->each(function ($item) {
+                $item->tags()->detach();
+                $item->delete();
+            });
+        });
+
         $category->classifications()->delete();
 
         $category->delete();
 
-        return redirect()->home();
+        if (url()->full() == url()->previous()) {
+            return redirect()->home();
+        }
+
+        return redirect()->back();
     }
 }

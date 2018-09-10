@@ -1,6 +1,13 @@
 body{
     font-family:'Zilla Slab';
 }
+input{
+    border:1px solid darkgrey;
+}
+a{
+    color:black;
+    text-decoration:none;
+}
 .container{
     margin: 0 0;
 }

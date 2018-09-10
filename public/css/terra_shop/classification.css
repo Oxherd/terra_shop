@@ -1,0 +1,16 @@
+.classification-1, .classification-2{
+    display:inline-block;
+    width:100%;
+}
+.classification-2{
+    vertical-align:top;
+}
+
+@media screen and (min-width: 768px){
+    .classification-1{
+        width:30%;
+    }
+    .classification-2{
+        width:68%;
+    }
+}

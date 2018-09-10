@@ -17,4 +17,43 @@ class TagController extends Controller
     {
         return view('tags/show', compact('tag'));
     }
+
+    public function store()
+    {
+        $this->validate(request(), [
+            'name' => 'required',
+            ]);
+
+        Tag::create([
+            'name' => request('name'),
+            ]);
+
+        return redirect()->back();
+    }
+
+    public function update(Tag $tag)
+    {
+        $this->validate(request(), [
+            'name' => 'required',
+            ]);
+
+        $tag->update([
+            'name' => request('name'),
+            ]);
+
+        return redirect()->back();
+    }
+
+    public function destroy(Tag $tag)
+    {
+        $tag->items()->detach();
+
+        $tag->delete();
+
+        if (url()->full() == url()->previous()) {
+            return redirect()->home();
+        }
+
+        return redirect()->back();
+    }
 }

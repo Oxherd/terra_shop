@@ -7,9 +7,40 @@ header img{
     height:auto;
     width:100%;
 }
-header select{
-    font-family:'Zilla Slab';
+
+/*CRUD form*/
+header .create, .update{
+    background: linear-gradient(to bottom, white 30%, #f2f2f2);
+    border-bottom:none;
+    box-sizing:border-box;
+    padding:1rem;
+    width:100%;
 }
+
+header .create input, .update input{
+    box-sizing:border-box;
+    font-size:1.5rem;
+    width:79%;
+}
+header .create button, .update button{
+    font-size:1.5rem;
+    overflow:hidden;
+    width:20%;
+}
+
+/*update form*/
+header .update select{
+    font-family:'Zilla Slab';
+    font-size:1.5rem;
+    margin-right:4%;
+    width:30%;
+}
+
+header .update input{
+    width:45%;
+}
+
+
 
 /*categories list*/
 .categories{
@@ -20,16 +51,19 @@ header select{
     background: linear-gradient(to bottom, white 30%, #f2f2f2);
     box-sizing:border-box;
     color:black;
-    cursor:pointer;
     display:inline-block;
     font-size:1.5rem;
     overflow:hidden;
     padding:1rem;
     position:relative;
     text-align:center;
-    width:33.33%;
+    width:50%;
     white-space:nowrap;
     vertical-align: bottom;
+}
+
+.categories li a{
+    cursor:pointer;
 }
 
 .categories li:hover{
@@ -41,99 +75,8 @@ header select{
     color:white;
 }
 
-/*categories manage*/
-
-header .form{
-    padding:1rem;
-}
-
-header p{
-    font-size: 1rem;
-    margin:.5rem;
-}
-
-/*toggle button*/
-
-header .controlGroup button{
-    background:white;
-    border:1px solid darkgrey;
-    box-sizing: border-box;
-    color:#a6a6a6;
-    font-size: 1.25rem;
-    overflow: hidden;
-    padding:.5rem;
-    white-space:nowrap;
-    width:33.33%;
-    vertical-align: bottom;
-}
-header .controlGroup button:first-child{
-    border-radius: 10px 0 0 0;
-}
-header .controlGroup button:last-child{
-    border-radius: 0 10px 0 0;
-}
-
-header .controlGroup button:focus{
-    outline:none;
-}
-
-header .controlGroup .select{
-    border-bottom:none;
-    color:#595959;
-}
-
-/*CRUD Form*/
-
-header .CRUDForm{
-    border:1px solid darkgrey;
-    border-top:none;
-    box-sizing: border-box;
-    display: none;
-    margin-bottom: 2rem;
-    padding:1rem;
-    width:100%;
-}
-header .CRUDForm .group{
-    width:100%;
-}
-header .CRUDForm .group input, button, select{
-    box-sizing: border-box;
-    font-size: 1.25rem;
-    overflow: hidden;
-}
-header .CRUDForm .group button{
-    width:20%;
-}
-
-header .create input{
-    border:1px solid darkgrey;
-    width:80%;
-}
-
-header .update select{
-    margin-right: 5%;
-    width:30%;
-}
-header .update input{
-    width: 45%;
-}
-
-header .destroy select{
-    width:80%;
-}
-
-
-
-
 @media screen and (min-width: 768px){
     .categories li{
         width:16.666%;
-    }
-    
-    header .CRUDForm .group{
-        left:50%;
-        position: relative;
-        transform: translateX(-50%);
-        width:80%;
     }
 }

@@ -1,23 +1,77 @@
-<!DOCTYPE html>
-<html>
-    <head>
+@extends('partials.main')
+
+@section('content')
+
+        <div class="container">
         
-    </head>
-    <body>
-        <a href="/">Index Categories</a> > <a href="/categories/{{ $classification->category->name }}">Show Category</a> > <a href="/classifications/{{ $classification->name }}">Show Classification</a> > <a>Show Item</a>
-        <h1>Item {{ $item->name }}</h1>
-        <a href="/classifications/{{ $classification->name }}">Back</a>
+                <div class="classification-1">
+                        @include('partials.sidebar', ['category' => $classification->category])
+                </div>
+                
+                <div class="classification-2 itemShow">
+                        
+                        <div class="group">
+                                
+                                <img src="{{ $item->picture }}"></img>
+                                
+                                <h1>{{ $item->name }}</h1>
+                                <hr>
+                                <h3 class="price">{{ $item->price }}</h3>
+                                <h3>{{ $item->description }}</h3>
+                        
+                        </div>
+                        
+                        @include('partials.addCart', ['item'])
+                        
+                        
+                        <!--update form-->
+                        @include('items.updateItem', ['item'])
+                        
+                        <!--tag list-->
+                        
+                        @foreach($item->tags as $tag)
+                                <h3 class="tag">
+                                        <a href="/tags/{{ $tag->name }}">{{ $tag->name }}</a>
+                                        
+                                        @if(Auth::check() && Auth::user()->is_admin)
+                                        
+                                                <form action="/items/{{ $item->name }}/{{ $tag->name }}" method="POST">
+                                                        {{ csrf_field() }}{{ method_field('delete') }}
+                                                        <button><i class="fas fa-times"></i></button>
+                                                </form>
+                                        @endif
+                                </h3>
+                        @endforeach
+                        
+                        
+                        @if(Auth::check() && Auth::user()->is_admin)
+                        
+                                <!--add tag-->
+                                <h3 class="tag">
+                                        <form class="add" action="/items/" method="POST">
+                                                {{ csrf_field() }}
+                                                <button><i class="fas fa-plus"></i></button>
+                                                
+                                                <select>
+                                                        <option disabled selected >Please Select One Tag</option>
+                                                        @foreach($tags as $tag)
+                                                                <option value="/items/{{ $item->name }}/{{ $tag->name }}">{{ $tag->name }}</option>
+                                                        @endforeach
+                                                </select>
+                                        </form>
+                                </h3>
+                                
+                                 <!--delete item-->
+                                
+                                <form class="delete" action="/items/{{ $item->name }}" method="POST">
+                                        {{ csrf_field() }}{{ method_field('delete') }}
+                                        <button><i class="fas fa-times"></i></button>
+                                </form>
+                        
+                        @endif
+                        
+                </div>
         
-        <ul>
-            <li>{{ $item->name }}</li>
-            <li>$ {{ $item->price }}</li>
-            <li>{{ $item->description }}</li>
-            <li>{{ $item->classification_id }}</li>
-            <li>Tags: 
-                @foreach($item->tags as $tag)
-                    <a href="/tags/{{ $tag->name }}">{{ $tag->name }}</a> | 
-                @endforeach
-            </li>
-        </ul>
-    </body>
-</html>
+        </div>
+
+@endsection

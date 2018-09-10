@@ -1,0 +1,77 @@
+.itemShow{
+    border:5px solid #00cc99;
+    box-sizing:border-box;
+    padding:1rem;
+    position:relative;
+}
+.itemShow img{
+    height:auto;
+    width:250px;
+}
+.itemShow h1{
+    font-size:3rem;
+}
+
+.itemShow .price{
+    color:brown;
+    float:right;
+    font-size:2rem;
+}
+.itemShow h3{
+    font-size:1.5rem;
+    vertical-align:bottom;
+}
+
+
+.itemShow .tag form{
+    float:right;
+}
+
+.itemShow .tag button{
+    background:none;
+    border:none;
+    border-radius:5px;
+    color:red;
+    font-size:1.25rem;
+    margin:0 0 0 .5rem;
+    padding: .25rem;
+}
+.itemShow .tag button:hover, .itemShow .tag .add button:hover{
+    background:rgba(0, 0, 0, 0.25);
+    color:white;
+    cursor:pointer;
+}
+
+.itemShow .tag .add button{
+    color:black;
+    margin:0;
+}
+
+.itemShow .tag .add select{
+    font-size:1.25rem;
+    display:none;
+}
+
+.itemShow .delete{
+    left:1rem;
+    position:absolute;
+    top:1rem;
+}
+.itemShow .delete button{
+    background:none;
+    border:none;
+}
+.itemShow .delete i{
+    background:white;
+    border-radius:5px;
+    box-shadow:5px 5px 10px darkgray;
+    color:red;
+    cursor:pointer;
+    font-size:1.5rem;
+    padding:.25rem;
+}
+.itemShow .delete i:hover{
+    background:darkgray;
+    color:white;
+}
+

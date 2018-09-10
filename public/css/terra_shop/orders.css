@@ -1,0 +1,47 @@
+.orders{
+    border:5px solid #00cc99;
+    box-sizing:border-box;
+    margin-bottom:1rem;
+}
+.orders h3{
+    background:#00cc99;
+    color:white;
+    font-size:2rem;
+    padding:1rem;
+}
+.orders .list{
+    
+    padding:1rem;
+}
+.orders .list .order{
+    margin-bottom:1rem;
+    border:3px solid #66ccff;
+}
+.orders .list .order .head li{
+    border-bottom:3px solid darkgrey;
+    display:inline-block;
+    font-size:1.5rem;
+    text-align:center;
+    width:24%;
+}
+.orders h4{
+    background:#66ccff;
+    font-size:1.5rem;
+    padding:1rem;
+}
+.orders h4:last-child{
+    background:none;
+    border-top:3px solid #66ccff;
+    color:black;
+}
+.orders .order_details:nth-child(odd){
+    background:rgba(0, 0, 0, 0.1);
+}
+.orders .order_details li{
+    display:inline-block;
+    font-size:1.5rem;
+    overflow:hidden;
+    text-align:center;
+    white-space: nowrap;
+    width:24%;
+}

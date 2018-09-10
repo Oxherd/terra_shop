@@ -1,0 +1,82 @@
+.item{
+    border:5px solid #00cc99;
+    box-shadow:5px 5px 10px darkgrey;
+    box-sizing:border-box;
+    display:inline-block;
+    height:10rem;
+    margin-bottom:.25rem;
+    overflow:hidden;
+    padding:.5rem;
+    position:relative;
+    width:100%;
+    vertical-align:top;
+}
+
+.item .picContainer{
+    /*background:darkgray;*/
+    box-sizing:border-box;
+    display:inline-block;
+    height:7.5rem;
+    padding:.25rem;
+    width:30%;
+}
+.item .picContainer img{
+    height:auto;
+    width:75%;
+}
+
+.item .group{
+    display:inline-block;
+    width:68%;
+    vertical-align:top;
+}
+
+.item .group .name{
+    font-size:1.75rem;
+}
+.item .group .price, .discount{
+    color:brown;
+    float:right;
+    font-size:1.5rem;
+    margin:.25rem;
+}
+
+.item hr{
+    margin: 1.5rem 1rem;
+    width:5rem;    
+}
+
+.item .group .description{
+    font-size:1.25rem;
+}
+
+.item .delete{
+    bottom:1rem;
+    left:1rem;
+    position:absolute;
+}
+.item .delete button{
+    background:none;
+    border:none;
+}
+.item .delete i{
+    background:white;
+    border-radius:5px;
+    box-shadow:5px 5px 10px darkgray;
+    color:red;
+    cursor:pointer;
+    font-size:1.5rem;
+    padding:.25rem;
+}
+.item .delete i:hover{
+    background:darkgray;
+    color:white;
+}
+
+@media screen and (min-width: 768px){
+    .item{
+        margin:.25rem;
+        margin-top:0;
+        width:48%;
+    }
+}
