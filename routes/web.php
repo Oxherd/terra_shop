@@ -7,7 +7,7 @@ Route::get('/', function () {
     $topRating = array();
 
     if (count(\App\Item::all()) >= 4) {
-        $newestItems = \App\Item::all()->last()->take(4)->get()->sortByDesc('created_at');
+        $newestItems = \App\Item::orderBy('created_at', 'desc')->take(4)->get();
     }
 
     if (count(\App\Comment::all()) >= 3) {
