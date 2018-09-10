@@ -1,0 +1,8 @@
+.topRating{
+    font-size:2rem;
+    margin-top:1rem;
+}
+.topRating hr{
+    border-top:5px solid #b3b3ff;
+    margin-top:1rem;
+}

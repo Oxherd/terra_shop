@@ -26,6 +26,7 @@
         <!--homepage stylesheet-->
         <link rel="stylesheet" href="{{ secure_asset('css/terra_shop/carousel.css') }}" />
         <link rel="stylesheet" href="{{ secure_asset('css/terra_shop/newest.css') }}" />
+        <link rel="stylesheet" href="{{ secure_asset('css/terra_shop/topRating.css') }}" />
         
         <!--show stylesheet-->
         <link rel="stylesheet" href="{{ secure_asset('css/terra_shop/sidebar.css') }}" />
@@ -36,6 +37,7 @@
         <link rel="stylesheet" href="{{ secure_asset('css/terra_shop/register.css') }}" />
         <link rel="stylesheet" href="{{ secure_asset('css/terra_shop/login.css') }}" />
         <link rel="stylesheet" href="{{ secure_asset('css/terra_shop/orders.css') }}" />
+        <link rel="stylesheet" href="{{ secure_asset('css/terra_shop/addComment.css') }}" />
         
     </head>
     <body>

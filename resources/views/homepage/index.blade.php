@@ -10,6 +10,6 @@
 
 @include('homepage.underPrice')
 
-@include('homepage.newestComments')
+@include('homepage.topRating')
 
 @endsection

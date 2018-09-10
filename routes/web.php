@@ -4,12 +4,17 @@
 
 Route::get('/', function () {
     $newestItems = array();
+    $topRating = array();
 
     if (count(\App\Item::all()) >= 5) {
-        $newestItems = \App\Item::all()->last()->take(5)->get();
+        $newestItems = \App\Item::all()->last()->take(5)->get()->sortByDesc('created_at');
     }
 
-    return view('homepage/index', compact(['newestItems' => 'newestItems', 'tags' => 'tags', 'classification']));
+    if (count(\App\Comment::all()) >= 3) {
+        $topRating = \App\Comment::orderBy('star', 'desc')->take(3)->get();
+    }
+
+    return view('homepage/index', compact(['newestItems' => 'newestItems', 'topRating' => 'topRating']));
 })->name('home');
 
 Route::get('/home', function () {
@@ -65,6 +70,12 @@ Route::post('/tags', 'TagController@store');
 Route::put('/tags/{tag}', 'TagController@update');
 
 Route::delete('/tags/{tag}', 'TagController@destroy');
+
+//comment
+
+Route::post('/comments', 'CommentController@store');
+
+Route::delete('/comments', 'CommentController@destroy');
 
 //auth
 

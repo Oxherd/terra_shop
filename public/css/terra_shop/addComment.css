@@ -1,0 +1,50 @@
+.addComment{
+    border:5px solid #b3b3ff;
+    margin-top:1rem;
+}
+.addComment h3{
+    background:#b3b3ff;
+    color:white;
+    font-size:1.5rem;
+    padding:1rem;
+}
+.addComment form{
+    padding:1rem;
+}
+.addComment form input[type=text]{
+    font-size:1.25rem;
+    margin-bottom:1rem;
+    width:100%;
+}
+.addComment form input[type=number]{
+    font-size:1.25rem;
+    width:33%;
+}
+.addComment form button{
+    float:right;
+    font-size:1.25rem;
+    overflow:hidden;
+    white-space:nowrap;
+    width:33%;
+}
+.addComment hr{
+    border-top:5px solid #b3b3ff;
+    margin:0;
+}
+.comment{
+    font-size:1.25rem;
+    padding:1rem;
+}
+.comment h4{
+    border-bottom:1px solid black;
+    display:inline-block;
+    font-size:1.5rem;
+    width:30%;
+}
+.comment span{
+    float:right;
+}
+.comment p{
+    font-size:1.5rem;
+    margin:1rem 0;
+}
