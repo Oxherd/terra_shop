@@ -49,7 +49,7 @@ class CategoryController extends Controller
             'name' => strtolower(request('name')),
             ]);
 
-        return redirect()->back();
+        return redirect()->home();
     }
 
     public function destroy(Category $category)

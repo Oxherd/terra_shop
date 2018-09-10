@@ -44,7 +44,7 @@ class ClassificationController extends Controller
             'name' => strtolower(request('name')),
             ]);
 
-        return redirect()->back();
+        return redirect('/categories/'.$classification->category->name);
     }
 
     public function destroy(Classification $classification)

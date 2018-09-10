@@ -41,7 +41,7 @@ class TagController extends Controller
             'name' => request('name'),
             ]);
 
-        return redirect()->back();
+        return redirect('/classifications/'.$tag->items->first()->classification->name);
     }
 
     public function destroy(Tag $tag)

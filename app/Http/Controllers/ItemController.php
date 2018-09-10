@@ -61,7 +61,7 @@ class ItemController extends Controller
             'description' => request('description'),
             ]);
 
-        return redirect()->back();
+        return redirect('/classifications/'.$item->classification->name);
     }
 
     public function destroy(Item $item)
