@@ -10,7 +10,6 @@
         <div class="group">
             <h3 class="name">{{ $item->name }}</h3>
             <p class="price">{{ $item->price }}</p>
-            <p class="discount">30%</p>
             <hr>
             <p class="description">{{ substr($item->description, 0, 50) }}...</p>
         </div>
